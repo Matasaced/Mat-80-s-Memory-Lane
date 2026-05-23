@@ -10,7 +10,7 @@ body {
     background-color: #050505; /* Fallback color */
     
     /* BACKGROUND SETUP */
-    background-image: url('assets/bg.png');
+    background-image: url('assets/bg.PNG');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
