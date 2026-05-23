@@ -73,25 +73,37 @@ audio, video {
     width: 100%;
     margin-top: 10px;
 }
-.video-wrapper {
+/* THE GRID CONTROLLER */
+.video-grid {
+    display: grid;
+    /* Automatically creates columns that are at least 280px wide */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px; /* Adds space between the video items */
     margin-top: 20px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 4px;
+}
+/* INDIVIDUAL VIDEO CARD */
+.video-wrapper {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 255, 255, 0.2); /* Subtle blue glow outline */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .video-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--neon-blue);
-    margin-bottom: 10px;
-    letter-spacing: 2px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
-.main-video, iframe {
+/* RETAINS THE ASPECT RATIO */
+.video-wrapper iframe {
     width: 100%;
-    max-width: 100%;
+    height: 200px; /* Perfect height for grid blocks */
     border: 2px solid var(--neon-pink);
-    box-shadow: 0 0 15px var(--neon-pink);
+    box-shadow: 0 0 10px var(--neon-pink);
     border-radius: 4px;
 }
 
