@@ -59,14 +59,10 @@ header {
 }
 
 .content-box {
-    background: rgba(0, 0, 0, 0.8);
-    border: 1px solid var(--neon-blue);
-    padding: 20px;
-    margin: 20px;
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    width: 90%;           /* Or whatever width you prefer */
+    max-width: 600px;     /* Keeps it sharp on desktop Mac screens */
+    margin: 0 auto 30px auto; /* The "auto" on left and right guarantees perfect center balance */
+    box-sizing: border-box;
 }
 
 audio, video {
@@ -92,13 +88,7 @@ audio, video {
     border-radius: 6px;
     border: 1px solid rgba(0, 255, 255, 0.2); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-] 
-  .content-box {
-    width: 90%;           /* Or whatever width you prefer */
-    max-width: 600px;     /* Keeps it sharp on desktop Mac screens */
-    margin: 0 auto 30px auto; /* The "auto" on left and right guarantees perfect center balance */
-    box-sizing: border-box;
-
+  
 }
 
 .video-title {
@@ -109,7 +99,6 @@ audio, video {
     letter-spacing: 1px;
     font-weight: bold;
 }
-
 /* THE IFRAME VIDEO PLAYER */
 .video-wrapper iframe {
     width: 100%;
