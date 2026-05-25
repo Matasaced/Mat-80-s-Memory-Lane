@@ -76,38 +76,37 @@ audio, video {
 /* THE GRID CONTROLLER */
 .video-grid {
     display: grid;
-    /* Automatically creates columns that are at least 280px wide */
+    /* This creates 1 column on small screens, and automatically fits them evenly on larger screens */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 25px; /* Adds space between the video items */
+    gap: 25px;
     margin-top: 20px;
+    width: 100%;          /* Force the grid to fill the container completely */
+    box-sizing: border-box;
 }
+
 /* INDIVIDUAL VIDEO CARD */
 .video-wrapper {
     background: rgba(0, 0, 0, 0.6);
     padding: 15px;
     border-radius: 6px;
-    border: 1px solid rgba(0, 255, 255, 0.2); /* Subtle blue glow outline */
+    border: 1px solid rgba(0, 255, 255, 0.2); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    
+    /* ADD THESE TO FORCE BALANCED CENTERING: */
+    width: 100%;          /* Stretch to fill its grid space evenly */
+    margin: 0 auto;       /* Push margins outward evenly on both sides */
+    box-sizing: border-box;
 }
 
-.video-title {
-    font-size: 1rem;
-    color: var(--neon-blue);
-    margin-bottom: 12px;
-    letter-spacing: 1px;
-    font-weight: bold;
-}
-
+/* THE IFRAME VIDEO PLAYER */
 .video-wrapper iframe {
     width: 100%;
     height: 200px;
     border: 2px solid var(--neon-pink);
     box-shadow: 0 0 10px var(--neon-pink);
     border-radius: 4px;
-    
-    /* ADD THESE TWO LINES TO FIX THE ALIGNMENT: */
-    box-sizing: border-box; 
     display: block;         
+    box-sizing: border-box; 
 }
 
 .description-box {
