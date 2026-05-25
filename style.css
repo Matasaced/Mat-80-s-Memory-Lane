@@ -59,35 +59,36 @@ header {
 }
 
 .content-box {
-    width: 90%;           /* Or whatever width you prefer */
-    max-width: 600px;     /* Keeps it sharp on desktop Mac screens */
-    margin: 0 auto 30px auto; /* The "auto" on left and right guarantees perfect center balance */
-    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid #00f0ff; /* Your glowing neon outline border */
+    box-shadow: 0 0 15px #00f0ff;
+    padding: 30px 20px;       /* Uniform layout padding on left and right sides */
+    margin: 0 auto 40px auto; /* Centered automatically on your screen */
+    width: 90%;
+    max-width: 650px;
+    box-sizing: border-box;   /* Locks borders to the edge beautifully */
+    border-radius: 8px;
 }
 
-audio, video {
-    width: 100%;
-    margin-top: 10px;
-}
-/* THE LAYOUT RESET CONTROLLER */
+/* Ensure the video container spans 100% of this new shared interior space */
 .video-grid {
     display: flex;
     flex-direction: column;
-    align-items: center;    /* Strips parent side-biases and centers absolutely */
-    justify-content: center;
+    align-items: center;
     width: 100%;
+    padding: 0;
     margin: 0 auto;
-    padding: 0;             /* Wipes out hidden padding throwing off the right margin */
     box-sizing: border-box;
 }
-/* INDIVIDUAL VIDEO CARD */
+
 .video-wrapper {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(20, 20, 20, 0.6);
     padding: 15px;
-    margin: 20px 0;         /* Gives distinct vertical breathing room */
+    margin: 15px 0;
+    width: 100%;             /* Fills the inside of the main box evenly */
+    box-sizing: border-box;
     border-radius: 6px;
-    border: 1px solid rgba(0, 255, 255, 0.2); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 255, 255, 0.2);
   
 }
 
