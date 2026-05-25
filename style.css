@@ -75,21 +75,26 @@ header {
 .video-grid {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;    
+    justify-content: center;
     width: 100%;
-    padding: 0;
     margin: 20px auto 0 auto;
+    padding: 0;             
     box-sizing: border-box;
 }
 
 .video-wrapper {
-    background: rgba(20, 20, 20, 0.6);
-    padding: 20px;            /* More breathing room inside the video frame */
-    margin: 20px 0;
-    width: 100%;             
-    box-sizing: border-box;
+    background: rgba(20, 20, 20, 0.7);
+    padding: 15px;            /* Gives a clean inner edge border */
+    margin: 20px 0;         
     border-radius: 6px;
-    border: 1px solid rgba(0, 255, 255, 0.2);
+    border: 1px solid rgba(0, 255, 255, 0.2); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    
+    /* Crucial Change: Force it to stay within the cyan container boundaries */
+    width: 100%;             
+    max-width: 100%;        
+    box-sizing: border-box;   /* Includes padding inside width calculations */
   
 }
 
@@ -102,16 +107,15 @@ header {
     font-weight: bold;
 }
 /* THE IFRAME VIDEO PLAYER */
-video-wrapper iframe {
-    width: 100%;
-    
-    /* DEEPENED THE HEIGHT TO 400px TO MATCH THE NEW WIDER 16:9 SCREEN LOOK */
-    height: 400px;            
+.video-wrapper iframe {
+    width: 100%;             /* Tells the video to NEVER exceed the wrapper size */
+    max-width: 100%;         /* Strictly clips any overflow leaks */
+    height: 350px;           /* Perfect cinematic height for an 850px container width */
     border: 2px solid var(--neon-pink);
     box-shadow: 0 0 10px var(--neon-pink);
     border-radius: 4px;
     display: block;         
-    box-sizing: border-box; 
+    box-sizing: border-box;  /* Guarantees the pink border doesn't leak out */
     margin: 0 auto;
 }
 
