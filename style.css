@@ -66,6 +66,7 @@ header {
     margin: 0 auto 40px auto; /* Centered automatically on your screen */
     width: 90%;
     max-width: 650px;
+    text-align: center;
     box-sizing: border-box;   /* Locks borders to the edge beautifully */
     border-radius: 8px;
 }
